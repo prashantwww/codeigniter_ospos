@@ -283,8 +283,9 @@ class Customer extends Person
                  $this->db->where('deleted',0);
               //$this->db->order_by("first_name", "asc");
                 
-		$i = 0;
+		
 	  /**  // working on version 3.x+
+           *    $i = 0;
 		foreach ($this->column as $item) // loop column 
 		{
 			if($_POST['search']['value']) // if datatable send POST for search
@@ -310,8 +311,7 @@ class Customer extends Person
 			$column[$i] = $item; // set column array variable to order processing
 			$i++;
 		}
-           * 
-           */
+           **/
                 if($_POST['search']['value']) // if datatable send POST for search
 		{
                     $match = $_POST['search']['value'];
@@ -321,7 +321,15 @@ class Customer extends Person
                             phone_number LIKE '%".$this->db->escape_like_str($match)."%' or 
                             account_number LIKE '%".$this->db->escape_like_str($match)."%' or 
                             CONCAT(`first_name`,' ',`last_name`) LIKE '%".$this->db->escape_like_str($match)."%')");
-                 }
+                 }      
+                
+                $i = 1;
+                foreach ($this->column as $item) // loop column 
+		{
+                    $column[$i] = $item; // set column array variable to order processing
+		    $i++;
+                } 
+                 
 		if(isset($_POST['order'])) // here order processing
 		{
 			$this->db->order_by($column[$_POST['order']['0']['column']], $_POST['order']['0']['dir']);
@@ -335,7 +343,7 @@ class Customer extends Person
 
 	function get_datatables()
 	{
-		$this->_get_datatables_query();
+		$this->_get_datatables_query();                
 		if($_POST['length'] != -1)
 		$this->db->limit($_POST['length'], $_POST['start']);
 		$query = $this->db->get();            

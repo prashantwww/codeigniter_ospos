@@ -33,7 +33,7 @@ $(document).ready(function()
 	});
         
      //datatables
-    table = $('#sortable_table').dataTable({
+    table = $('#sortable_table').DataTable({
         
         "processing": true, //Feature control the processing indicator.
         "serverSide": true, //Feature control DataTables' server-side processing mode.
