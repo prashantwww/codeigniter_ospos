@@ -13,10 +13,13 @@ class Config extends Secure_area
 		$locations = $this->Stock_locations->get_location_names();
 		foreach($locations->result_array() as $array) 
 		{
-			array_push($location_names, $array['location_name']);
+		  array_push($location_names, $array['location_name']);
 		}
 		$data['location_names'] = implode(',', $location_names);
-		$this->load->view("config", $data);
+		//$this->load->view("config", $data);
+                $this->body = 'config'; // passing middle to function. change this for different views.
+                $this->data = $data;
+                $this->layout();
 	}
 		
 	function save()
@@ -38,7 +41,7 @@ class Config extends Secure_area
 		'language'=>$this->input->post('language'),
 		'timezone'=>$this->input->post('timezone'),
 		'print_after_sale'=>$this->input->post('print_after_sale'),
-        'tax_included'=>$this->input->post('tax_included'),
+                'tax_included'=>$this->input->post('tax_included'),
 		'recv_invoice_format'=>$this->input->post('recv_invoice_format'),
 		'sales_invoice_format'=>$this->input->post('sales_invoice_format'),
 		'custom1_name'=>$this->input->post('custom1_name'),/**GARRISON ADDED 4/20/2013**/

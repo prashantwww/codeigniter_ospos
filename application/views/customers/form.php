@@ -62,7 +62,8 @@ $(document).ready(function()
                                         <input type="radio" name="taxable" id="taxable" value="0" <?php if($person_info->taxable==0){?> checked="checked"  <?php } ?>>No
                                     </div>
                                 </div> 
-                              </div> <!-- end of row -->
+                              </div>
+                            </div>    <!-- end of row -->
                             <div class="row"> &nbsp; </div>
                             <div class="panel-footer">
                                    <button type="reset" class="btn btn-primary clear">Clear Form</button>                                    
