@@ -1,0 +1,77 @@
+/* 
+    Document   : custom
+    Created on : Dec 16, 2015, 6:14:48 PM
+    Author     : vuiwks01
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/* custom css starts */
+a.nostyle {
+	color:inherit;
+}
+
+.custom-heading-text { /* panel heading text */
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.0;
+	border-radius: 3px;
+	text-transform:uppercase;
+}
+
+.form-header-line {
+    font-weight:900;
+    font-size: 12px;
+    padding-bottom:10px;
+    border-bottom:1px solid #eeeeee;
+    text-transform:uppercase;
+}
+/* custom panel css ends */
+
+#spinner
+{
+        float:right;	
+	display:none;
+}
+
+/* login page styles starts */
+#login-container {
+	padding-top: 150px;
+}
+
+#login-container .container-header .col-image{
+	border-top: 5px solid #e60000;
+	padding: 0 0 20px 0;
+}
+
+#login-welcome-text {
+	font-weight: bolder;
+	color: #e60000;
+	font-size: large;
+}
+/* login page styles ends */
+
+/* centered columns styles starts */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.col-fixed {
+    /* custom width */
+    width:320px;
+}
+.col-min {
+    /* custom min width */
+    min-width:320px;
+}
+.col-max {
+    /* custom max width */
+    max-width:320px;
+}
+/* centered columns styles ends */
