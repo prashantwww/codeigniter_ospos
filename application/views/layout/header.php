@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="<?php echo base_url();?>">
-                    <img src="<?php echo base_url();?>assets/img/ospos_logo.jpg" width="160px" height="60px"/>
+                    <img src="<?php echo base_url();?>assets/img/ospos_logo.jpg" width="160px" height="50px"/>
                     <?php echo date('F d, Y') ?>
                 </a>
             </div>

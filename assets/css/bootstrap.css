@@ -12,6 +12,7 @@ html {
 }
 body {
   margin: 0;
+  
 }
 article,
 aside,
@@ -1746,7 +1747,7 @@ pre code {
     float: left;
   }
   .col-md-12 {
-    width: 100%;
+    width: 100%;    
   }
   .col-md-11 {
     width: 91.66666667%;

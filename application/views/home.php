@@ -1,9 +1,12 @@
-
         <div class="row">
-            <div class="col-md-12">
-                <h4 class="header-line">DASHBOARD</h4>
-            </div>
+            &nbsp;
         </div>
+        <!-- START BREADCRUMB -->
+           <ul class="breadcrumb">
+               <li><a href="<?php echo site_url("home");?>"><i class="fa fa-lg fa-home"></i></a></li>         
+               <li><label >Dashboard</label></li>
+           </ul>
+       <!-- END BREADCRUMB --> 
         <div class="row">
             <?php
             foreach($allowed_modules->result() as $module)

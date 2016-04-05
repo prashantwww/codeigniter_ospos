@@ -119,14 +119,7 @@ $(document).ready(function()
                                 </tbody>      
                             </table>                     
                             </div>  
-                       </div>
-                     
+                       </div>                     
             </div>
-       <!-- /. ROW  -->
-       
+       <!-- /. ROW  -->       
     </div> 
-     
-</body>
-</html>
-       
-

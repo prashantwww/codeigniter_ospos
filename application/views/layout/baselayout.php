@@ -54,9 +54,9 @@
 	<!-- END HEADER -->
         <div class="content-wrapper">
             <div class="container">		
-	<!-- BEGIN BODY CONTAINER -->
-         <?php if($body) echo $body ;?>
-	<!-- END BODY CONTAINER -->
+                <!-- BEGIN BODY CONTAINER -->
+                 <?php if($body) echo $body ;?>
+                <!-- END BODY CONTAINER -->
 	     </div>
          </div>
 	<!-- BEGIN FOOTER -->

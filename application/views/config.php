@@ -129,7 +129,7 @@ $(document).ready(function()
                                 </div>
                                 <div class="col-lg-4">                                        
                                     <div class="form-group">
-                                     <label>Website </label> 
+                                     <label>Website</label> 
                                      <input type="text" class="form-control" name="website" id="website"  value="<?php echo $this->config->item('website')?>" placeholder="Enter website"/>
                                    </div>
                                 </div>
