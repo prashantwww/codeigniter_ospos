@@ -30,6 +30,18 @@ $(document).ready(function()
             <li><label >Store Config</label></li>           
         </ul>
     <!-- END BREADCRUMB -->
+    <?php if($this->session->flashdata('flashSuccess')):?>
+            <div class="alert alert-success"> 
+              <button type="button" class="close" data-dismiss="alert">x</button>
+               <?=$this->session->flashdata('flashSuccess')?> 
+            </div>
+        <?php endif ?>  
+        <?php if($this->session->flashdata('flashError')):?>
+           <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                 <?=$this->session->flashdata('flashError')?>
+            </div>
+        <?php endif?>  
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-primary">
@@ -57,11 +69,9 @@ $(document).ready(function()
                                 </div> 
                                  <div class="col-lg-4">                                        
                                     <div class="form-group">
-                                     <label>Address </label> 
-                                       <textarea class="form-control" rows="2" name="address" placeholder="Enter address">
-                                         <?php echo $this->config->item("address"); ?>
-                                       </textarea> 
-                                   </div>
+                                     <label>Address </label>                                        
+                                       <textarea class="form-control" rows="2" cols="66" name="address" placeholder="Enter address"><?php echo $this->config->item('address')?></textarea>                             
+                                    </div>
                                 </div> 
                               </div> <!-- end of row -->
                             <div class="row"> &nbsp; </div>
@@ -130,9 +140,7 @@ $(document).ready(function()
                                 <div class="col-lg-4">                                        
                                     <div class="form-group">
                                         <label>Return policy</label>                                 
-                                        <textarea class="form-control" rows="2" name="return_policy" placeholder="Enter return_policy">
-                                            <?php echo $this->config->item('return_policy')?>
-                                        </textarea>
+                                        <textarea class="form-control" rows="2" name="return_policy" placeholder="Enter return policy"><?php echo $this->config->item('return_policy')?></textarea>                                     
                                     </div>
                                 </div>
                                 <div class="col-lg-4">                                        

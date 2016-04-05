@@ -74,10 +74,13 @@ class Config extends Secure_area
 			$this->receiving_lib->clear_all();
         }
         
-		if( $this->Appconfig->batch_save( $batch_save_data ) && $this->Stock_locations->array_save($stock_locations_trimmed))
-		{
-			echo json_encode(array('success'=>true,'message'=>$this->lang->line('config_saved_successfully')));
-		}
+        if( $this->Appconfig->batch_save( $batch_save_data ) && $this->Stock_locations->array_save($stock_locations_trimmed))
+        {
+                //echo json_encode(array('success'=>true,'message'=>$this->lang->line('config_saved_successfully')));
+                 $this->session->set_flashdata('flashSuccess', $this->lang->line('config_saved_successfully'));    
+                            
+                 redirect('/config');
+        }
 	}
 }
 ?>
